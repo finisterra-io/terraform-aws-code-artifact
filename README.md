@@ -36,7 +36,7 @@ No modules.
 | <a name="input_encryption_key"></a> [encryption\_key](#input\_encryption\_key) | The encryption key for the domain. | `string` | `null` | no |
 | <a name="input_encryption_key_alias"></a> [encryption\_key\_alias](#input\_encryption\_key\_alias) | The encryption key alias for the domain. | `string` | `null` | no |
 | <a name="input_policy_document"></a> [policy\_document](#input\_policy\_document) | The policy document. | `string` | `null` | no |
-| <a name="input_repositories"></a> [repositories](#input\_repositories) | A list of repositories to create in the domain. | <pre>map(object({<br>    description = optional(string)<br>    external_connections = optional(list(object({<br>      external_connection_name = optional(string)<br>      package_format           = optional(string)<br>      status                   = optional(string)<br>    })))<br>    upstreams = optional(list(object({<br>      repository_name = string<br>    })))<br>    tags            = optional(map(string))<br>    policy_document = optional(string)<br>  }))</pre> | `null` | no |
+| <a name="input_repositories"></a> [repositories](#input\_repositories) | A list of repositories to create in the domain. | <pre>map(object({<br>    description = string<br>    external_connections = list(object({<br>      external_connection_name = string<br>      package_format           = string<br>      status                   = string<br>    }))<br>    upstreams = list(object({<br>      repository_name = string<br>    }))<br>    tags            = map(string)<br>    policy_document = string<br>  }))</pre> | `null` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | A map of tags to assign to the resource. | `map(string)` | `{}` | no |
 
 ## Outputs
