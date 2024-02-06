@@ -1,1 +1,43 @@
 
+<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Requirements
+
+No requirements.
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
+
+## Modules
+
+No modules.
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [aws_codeartifact_domain.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/codeartifact_domain) | resource |
+| [aws_codeartifact_domain_permissions_policy.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/codeartifact_domain_permissions_policy) | resource |
+| [aws_codeartifact_repository.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/codeartifact_repository) | resource |
+| [aws_codeartifact_repository_permissions_policy.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/codeartifact_repository_permissions_policy) | resource |
+| [aws_kms_key.kms](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/kms_key) | data source |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_domain"></a> [domain](#input\_domain) | The name of the domain. | `string` | n/a | yes |
+| <a name="input_domain_policy_domain_owner"></a> [domain\_policy\_domain\_owner](#input\_domain\_policy\_domain\_owner) | The account number of the domain owner. | `string` | `null` | no |
+| <a name="input_enabled"></a> [enabled](#input\_enabled) | Whether or not to create the resource. | `bool` | `true` | no |
+| <a name="input_encryption_key"></a> [encryption\_key](#input\_encryption\_key) | The encryption key for the domain. | `string` | `null` | no |
+| <a name="input_encryption_key_alias"></a> [encryption\_key\_alias](#input\_encryption\_key\_alias) | The encryption key alias for the domain. | `string` | `null` | no |
+| <a name="input_policy_document"></a> [policy\_document](#input\_policy\_document) | The policy document. | `string` | `null` | no |
+| <a name="input_repositories"></a> [repositories](#input\_repositories) | A list of repositories to create in the domain. | <pre>map(object({<br>    description = optional(string)<br>    external_connections = optional(list(object({<br>      external_connection_name = optional(string)<br>      package_format           = optional(string)<br>      status                   = optional(string)<br>    })))<br>    upstreams = optional(list(object({<br>      repository_name = string<br>    })))<br>    tags            = optional(map(string))<br>    policy_document = optional(string)<br>  }))</pre> | `null` | no |
+| <a name="input_tags"></a> [tags](#input\_tags) | A map of tags to assign to the resource. | `map(string)` | `{}` | no |
+
+## Outputs
+
+No outputs.
+<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
