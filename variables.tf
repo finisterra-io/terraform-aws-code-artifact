@@ -36,17 +36,17 @@ variable "policy_document" {
 variable "repositories" {
   description = "A list of repositories to create in the domain."
   type = map(object({
-    description = optional(string)
-    external_connections = optional(list(object({
-      external_connection_name = optional(string)
-      package_format           = optional(string)
-      status                   = optional(string)
-    })))
-    upstreams = optional(list(object({
+    description = string
+    external_connections = list(object({
+      external_connection_name = string
+      package_format           = string
+      status                   = string
+    }))
+    upstreams = list(object({
       repository_name = string
-    })))
-    tags            = optional(map(string))
-    policy_document = optional(string)
+    }))
+    tags            = map(string)
+    policy_document = string
   }))
   default = null
 }
