@@ -42,5 +42,8 @@ No modules.
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_domain_name"></a> [domain\_name](#output\_domain\_name) | The name of the domain |
+| <a name="output_repository_names"></a> [repository\_names](#output\_repository\_names) | The names of the repositories |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
