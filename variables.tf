@@ -21,13 +21,6 @@ variable "encryption_key_alias" {
   default     = null
 }
 
-variable "domain_policy_domain_owner" {
-  description = "The account number of the domain owner."
-  type        = string
-  default     = null
-}
-
-
 variable "tags" {
   description = "A map of tags to assign to the resource."
   type        = map(string)
