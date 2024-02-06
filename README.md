@@ -32,7 +32,6 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_domain"></a> [domain](#input\_domain) | The name of the domain. | `string` | n/a | yes |
-| <a name="input_domain_policy_domain_owner"></a> [domain\_policy\_domain\_owner](#input\_domain\_policy\_domain\_owner) | The account number of the domain owner. | `string` | `null` | no |
 | <a name="input_enabled"></a> [enabled](#input\_enabled) | Whether or not to create the resource. | `bool` | `true` | no |
 | <a name="input_encryption_key"></a> [encryption\_key](#input\_encryption\_key) | The encryption key for the domain. | `string` | `null` | no |
 | <a name="input_encryption_key_alias"></a> [encryption\_key\_alias](#input\_encryption\_key\_alias) | The encryption key alias for the domain. | `string` | `null` | no |
