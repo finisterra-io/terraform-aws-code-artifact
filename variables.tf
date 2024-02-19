@@ -39,10 +39,8 @@ variable "repositories" {
     description = optional(string)
     external_connections = optional(list(object({
       external_connection_name = optional(string)
-      package_format           = optional(string)
-      status                   = optional(string)
     })))
-    upstreams = optional(list(object({
+    upstream = optional(list(object({
       repository_name = string
     })))
     tags            = optional(map(string))
