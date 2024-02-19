@@ -21,13 +21,11 @@ resource "aws_codeartifact_repository" "this" {
     for_each = try(each.value.external_connections, null) != null ? each.value.external_connections : []
     content {
       external_connection_name = external_connections.value.external_connection_name
-      package_format           = external_connections.value.package_format
-      status                   = external_connections.value.status
     }
   }
 
   dynamic "upstream" {
-    for_each = try(each.value.upstreams, null) != null ? each.value.upstreams : []
+    for_each = try(each.value.upstream, null) != null ? each.value.upstream : []
     content {
       repository_name = upstream.value.repository_name
     }
